@@ -1,0 +1,18 @@
+title: 'How to create New project '
+description: >-
+  First you can Name to your project and then you can add descriptions for your
+  project 
+template:
+  repo: how-to-create-new-project-template
+  name: how-to-create-new-project
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
